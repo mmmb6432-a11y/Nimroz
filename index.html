@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>بازار نیمروز | خرید و فروش</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <div class="logo">بازار <b>نیمروز</b></div>
+    <button id="loginBtn" class="ghost">ورود / ثبت‌نام</button>
+  </div>
+  <div class="hero">
+    <h1>هر چیزی را در نیمروز پیدا کن</h1>
+    <p>خرید و فروش آسان، سریع و محلی</p>
+    <div class="search"><span>⌕</span><input id="search" placeholder="چه چیزی می‌خواهید؟ مثل موبایل، موتر..." /></div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="section-title"><h2>دسته‌بندی‌ها</h2></div>
+    <div class="cats" id="cats">
+      <button data-cat="همه">🏠<span>همه</span></button>
+      <button data-cat="موبایل">📱<span>موبایل</span></button>
+      <button data-cat="موتر">🚗<span>موتر</span></button>
+      <button data-cat="خانه">🏠<span>خانه</span></button>
+      <button data-cat="لوازم">🛋️<span>لوازم</span></button>
+      <button data-cat="خدمات">🛠️<span>خدمات</span></button>
+      <button data-cat="لباس">👕<span>لباس</span></button>
+      <button data-cat="سایر">📦<span>سایر</span></button>
+    </div>
+  </section>
+
+  <section class="list-head">
+    <h2>آگهی‌های جدید</h2>
+    <button id="addBtn" class="primary">＋ ثبت آگهی</button>
+  </section>
+  <div id="ads" class="ads"></div>
+<div id="userBar" class="userbar"></div>
+</main>
+
+<nav class="bottom">
+  <button>🏠<small>خانه</small></button>
+  <button id="navAdd">➕<small>ثبت آگهی</small></button>
+  <button id="navProfile">👤<small>حساب من</small></button>
+</nav>
+
+<div class="modal" id="modal">
+ <div class="sheet">
+  <button class="close">×</button>
+  <h2 id="modalTitle">ثبت آگهی</h2>
+  <form id="adForm">
+   <input id="title" required placeholder="عنوان آگهی">
+   <input id="price" required type="number" placeholder="قیمت به افغانی">
+   <select id="category"><option>موبایل</option><option>موتر</option><option>خانه</option><option>لوازم</option><option>خدمات</option><option>لباس</option><option>سایر</option></select>
+   <input id="place" placeholder="محل، مثلاً زرنج">
+   <textarea id="desc" placeholder="توضیحات آگهی"></textarea>
+   <input id="phone" placeholder="شماره تماس / واتساپ">
+   <input id="image" type="url" placeholder="لینک عکس (اختیاری)">
+   <button class="primary wide">انتشار آگهی</button>
+  </form>
+ </div>
+</div>
+
+<div class="modal" id="authModal">
+ <div class="sheet">
+  <button class="close">×</button>
+  <h2 id="authTitle">ورود به حساب</h2>
+  <input id="authEmail" type="email" placeholder="ایمیل">
+  <input id="authPassword" type="password" placeholder="رمز عبور">
+  <button id="authAction" class="primary wide">ورود</button>
+  <button id="switchAuth" class="ghost wide">ساخت حساب جدید</button>
+  <p id="authMsg"></p>
+ </div>
+</div>
+<div class="modal" id="profileModal">
+ <div class="sheet">
+  <button class="close">×</button>
+  <h2>حساب من</h2>
+  <p id="profileText">برای نسخه آزمایشی، اطلاعات حساب در همین گوشی ذخیره می‌شود.</p>
+  <input id="name" placeholder="نام شما">
+  <input id="userPhone" placeholder="شماره تلفن">
+  <button id="saveProfile" class="primary wide">ذخیره حساب</button>
+ </div>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
